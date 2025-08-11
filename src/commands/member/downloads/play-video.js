@@ -34,15 +34,16 @@ module.exports = {
     await sendWaitReact();
 
     try {
-      // Buscamos el video con yt-search
+      // Buscamos el video en yt con yt-search
       const search = await yts(fullArgs.join(" "));
       if (!search.videos || search.videos.length === 0) {
         await sendErrorReply("⚠️ No se encontraron resultados.");
         return;
       }
+
       const video = search.videos[0];
 
-      // Limite de duración 63 min (3780 seg)
+      // Checamos duración máxima (63 min = 3780 seg)
       if (video.seconds > 3780) {
         await sendErrorReply("⛔ El video supera el límite de duración permitido (63 minutos).");
         return;
@@ -50,7 +51,7 @@ module.exports = {
 
       const url = video.url;
 
-      // Construimos la url para la API de video
+      // Llamamos a la API externa para descargar video mp4
       const apiUrl = `https://myapiadonix.vercel.app/api/ytmp4?url=${encodeURIComponent(url)}`;
 
       const res = await fetch(apiUrl);
@@ -62,7 +63,7 @@ module.exports = {
 
       await sendSuccessReact();
 
-      // Mandamos info del video como imagen con texto
+      // Mandamos la miniatura con info
       await conn.sendMessage(m.chat, {
         image: { url: thumbnail },
         caption: `*Título*: ${title}
@@ -71,12 +72,13 @@ module.exports = {
 *Canal*: ${video.author.name}`,
       }, { quoted: m });
 
-      // Mandamos el video
+      // Mandamos el video mp4
       await conn.sendMessage(m.chat, {
         video: { url: download },
         mimetype: "video/mp4",
         fileName: `${title}.mp4`,
       }, { quoted: m });
+
     } catch (error) {
       console.log(error);
       await sendErrorReply("❌ Error: " + error.message);
