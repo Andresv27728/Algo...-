@@ -1,25 +1,25 @@
 const path = require("path");
 
 // Prefijo estándar de comandos.
-exports.PREFIX = "/";
+exports.PREFIX = ":";
 
 // Emoji del bot (cambia si lo prefieres).
-exports.BOT_EMOJI = "🤖";
+exports.BOT_EMOJI = "🦈";
 
 // Nombre del bot (cambia si lo prefieres).
-exports.BOT_NAME = "Takeshi Bot";
+exports.BOT_NAME = "GAWR GURA 3.0";
 
 // Número del bot.
 // Solo números, exactamente como aparece en WhatsApp.
-exports.BOT_NUMBER = "558112345678";
+exports.BOT_NUMBER = "573133374132";
 
 // Número del dueño del bot.
 // Solo números, exactamente como aparece en WhatsApp.
-exports.OWNER_NUMBER = "5521950502020";
+exports.OWNER_NUMBER = "573133374132";
 
 // LID del dueño del bot.
 // Para obtener el LID del dueño del bot, usa el comando <prefijo>get-lid @mencionar o +teléfono del dueño.
-exports.OWNER_LID = "219999999999999@lid";
+exports.OWNER_LID = "176742836768966@lid";
 
 // Directorio de los comandos
 exports.COMMANDS_DIR = path.join(__dirname, "commands");
