@@ -1,10 +1,10 @@
 const { PREFIX } = require(`${BASE_DIR}/config`);
-const { play } = require(`${BASE_DIR}/services/spider-x-api`);
-const { InvalidParameterError } = require(`${BASE_DIR}/errors`);
+import fetch from 'node-fetch';
+import yts from 'yt-search';
 
 module.exports = {
   name: "play-video",
-  description: "Descargo videos",
+  description: "Descargo videos con la API que usas",
   commands: ["play-video", "pv"],
   usage: `${PREFIX}play-video MC Hariel`,
   /**
@@ -12,48 +12,74 @@ module.exports = {
    * @returns {Promise<void>}
    */
   handle: async ({
-    sendVideoFromURL,
-    sendImageFromURL,
+    conn,
+    m,
     fullArgs,
     sendWaitReact,
     sendSuccessReact,
     sendErrorReply,
   }) => {
     if (!fullArgs.length) {
-      throw new InvalidParameterError("¡Necesitas decirme qué quieres buscar!");
+      await sendErrorReply("¡Necesitas decirme qué quieres buscar!");
+      return;
     }
 
-    if (fullArgs.includes("http://") || fullArgs.includes("https://")) {
-      throw new InvalidParameterError(
+    if (fullArgs.some(arg => arg.includes("http://") || arg.includes("https://"))) {
+      await sendErrorReply(
         `¡No puedes usar enlaces para descargar videos! Usa ${PREFIX}yt-mp4 enlace`
       );
+      return;
     }
 
     await sendWaitReact();
 
     try {
-      const data = await play("video", fullArgs);
+      // Buscamos el video con yt-search
+      const search = await yts(fullArgs.join(" "));
+      if (!search.videos || search.videos.length === 0) {
+        await sendErrorReply("⚠️ No se encontraron resultados.");
+        return;
+      }
+      const video = search.videos[0];
 
-      if (!data) {
-        await sendErrorReply("¡No se encontraron resultados!");
+      // Limite de duración 63 min (3780 seg)
+      if (video.seconds > 3780) {
+        await sendErrorReply("⛔ El video supera el límite de duración permitido (63 minutos).");
         return;
       }
 
+      const url = video.url;
+
+      // Construimos la url para la API de video
+      const apiUrl = `https://myapiadonix.vercel.app/api/ytmp4?url=${encodeURIComponent(url)}`;
+
+      const res = await fetch(apiUrl);
+      if (!res.ok) throw new Error("Error al conectar con la API.");
+      const json = await res.json();
+      if (!json.success) throw new Error("No se pudo obtener información del video.");
+
+      const { title, thumbnail, quality, download } = json.data;
+
       await sendSuccessReact();
 
-      await sendImageFromURL(
-        data.thumbnail,
-        `*Título*: ${data.title}
-        
-*Descripción*: ${data.description}
-*Duración en segundos*: ${data.total_duration_in_seconds}
-*Canal*: ${data.channel.name}`
-      );
+      // Mandamos info del video como imagen con texto
+      await conn.sendMessage(m.chat, {
+        image: { url: thumbnail },
+        caption: `*Título*: ${title}
+*Duración*: ${video.timestamp}
+*Calidad*: ${quality}
+*Canal*: ${video.author.name}`,
+      }, { quoted: m });
 
-      await sendVideoFromURL(data.url);
+      // Mandamos el video
+      await conn.sendMessage(m.chat, {
+        video: { url: download },
+        mimetype: "video/mp4",
+        fileName: `${title}.mp4`,
+      }, { quoted: m });
     } catch (error) {
       console.log(error);
-      await sendErrorReply(JSON.stringify(error.message));
+      await sendErrorReply("❌ Error: " + error.message);
     }
   },
 };
