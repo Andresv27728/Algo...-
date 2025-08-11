@@ -4,8 +4,32 @@
  * https://delirius-apiofc.vercel.app/home
  */
 const axios = require("axios");
+const { DELIRIUS_API_BASE_URL } = require("../config");
 
-const DELIRIUS_API_BASE_URL = "https://delirius-apiofc.vercel.app";
+// URL base configurable desde config.js
+const API_BASE_URL = DELIRIUS_API_BASE_URL || "https://delirius-apiofc.vercel.app";
+
+/**
+ * Realizar petición GET a la API
+ */
+const apiRequest = async (endpoint, params = {}) => {
+  try {
+    const queryParams = new URLSearchParams(params).toString();
+    const url = `${API_BASE_URL}${endpoint}${queryParams ? `?${queryParams}` : ''}`;
+    
+    const { data } = await axios.get(url, {
+      timeout: 30000, // 30 segundos timeout
+      headers: {
+        'User-Agent': 'TakeshiBot/6.0.0'
+      }
+    });
+
+    return data;
+  } catch (error) {
+    console.error(`Error en API request a ${endpoint}:`, error.message);
+    throw new Error(`Error en la API: ${error.response?.data?.message || error.message}`);
+  }
+};
 
 /**
  * Descargar audio/video de YouTube
@@ -15,11 +39,8 @@ exports.youtubeDl = async (url, format = "mp4") => {
     throw new Error("¡Necesitas proporcionar una URL de YouTube!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/download/ytmp${format === "mp3" ? "3" : "4"}?url=${encodeURIComponent(url)}`
-  );
-
-  return data;
+  const endpoint = `/download/ytmp${format === "mp3" ? "3" : "4"}`;
+  return await apiRequest(endpoint, { url });
 };
 
 /**
@@ -30,11 +51,7 @@ exports.tiktokDl = async (url) => {
     throw new Error("¡Necesitas proporcionar una URL de TikTok!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/download/tiktok?url=${encodeURIComponent(url)}`
-  );
-
-  return data;
+  return await apiRequest("/download/tiktok", { url });
 };
 
 /**
@@ -45,11 +62,29 @@ exports.instagramDl = async (url) => {
     throw new Error("¡Necesitas proporcionar una URL de Instagram!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/download/instagram?url=${encodeURIComponent(url)}`
-  );
+  return await apiRequest("/download/instagram", { url });
+};
 
-  return data;
+/**
+ * Descargar video de Facebook
+ */
+exports.facebookDl = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL de Facebook!");
+  }
+
+  return await apiRequest("/download/facebook", { url });
+};
+
+/**
+ * Descargar video de Twitter/X
+ */
+exports.twitterDl = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL de Twitter!");
+  }
+
+  return await apiRequest("/download/twitter", { url });
 };
 
 /**
@@ -60,11 +95,7 @@ exports.youtubeSearch = async (query) => {
     throw new Error("¡Necesitas proporcionar un término de búsqueda!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/search/ytsearch?q=${encodeURIComponent(query)}`
-  );
-
-  return data;
+  return await apiRequest("/search/ytsearch", { q: query });
 };
 
 /**
@@ -75,11 +106,7 @@ exports.chatgpt = async (text) => {
     throw new Error("¡Necesitas proporcionar un texto!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/ai/chatgpt?q=${encodeURIComponent(text)}`
-  );
-
-  return data;
+  return await apiRequest("/ai/chatgpt", { q: text });
 };
 
 /**
@@ -90,11 +117,18 @@ exports.textToImage = async (prompt) => {
     throw new Error("¡Necesitas proporcionar una descripción!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/ai/text2img?q=${encodeURIComponent(prompt)}`
-  );
+  return await apiRequest("/ai/text2img", { q: prompt });
+};
 
-  return data;
+/**
+ * Generador de imágenes AI v2
+ */
+exports.textToImageV2 = async (prompt) => {
+  if (!prompt) {
+    throw new Error("¡Necesitas proporcionar una descripción!");
+  }
+
+  return await apiRequest("/ai/txt2img", { q: prompt });
 };
 
 /**
@@ -105,11 +139,7 @@ exports.upscaleImage = async (imageUrl) => {
     throw new Error("¡Necesitas proporcionar una URL de imagen!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/ai/upscale?url=${encodeURIComponent(imageUrl)}`
-  );
-
-  return data;
+  return await apiRequest("/ai/upscale", { url: imageUrl });
 };
 
 /**
@@ -120,11 +150,7 @@ exports.removeBg = async (imageUrl) => {
     throw new Error("¡Necesitas proporcionar una URL de imagen!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/ai/removebg?url=${encodeURIComponent(imageUrl)}`
-  );
-
-  return data;
+  return await apiRequest("/ai/removebg", { url: imageUrl });
 };
 
 /**
@@ -135,11 +161,7 @@ exports.translate = async (text, targetLang = "es") => {
     throw new Error("¡Necesitas proporcionar un texto para traducir!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/tools/translate?q=${encodeURIComponent(text)}&lang=${targetLang}`
-  );
-
-  return data;
+  return await apiRequest("/tools/translate", { q: text, lang: targetLang });
 };
 
 /**
@@ -150,9 +172,49 @@ exports.webInfo = async (url) => {
     throw new Error("¡Necesitas proporcionar una URL!");
   }
 
-  const { data } = await axios.get(
-    `${DELIRIUS_API_BASE_URL}/tools/webinfo?url=${encodeURIComponent(url)}`
-  );
+  return await apiRequest("/tools/webinfo", { url });
+};
 
-  return data;
+/**
+ * Crear sticker animado (ATTP)
+ */
+exports.attp = async (text) => {
+  if (!text) {
+    throw new Error("¡Necesitas proporcionar un texto!");
+  }
+
+  return await apiRequest("/sticker/attp", { text });
+};
+
+/**
+ * Crear sticker de texto (TTP)
+ */
+exports.ttp = async (text) => {
+  if (!text) {
+    throw new Error("¡Necesitas proporcionar un texto!");
+  }
+
+  return await apiRequest("/sticker/ttp", { text });
+};
+
+/**
+ * Obtener información del clima
+ */
+exports.weather = async (city) => {
+  if (!city) {
+    throw new Error("¡Necesitas proporcionar el nombre de una ciudad!");
+  }
+
+  return await apiRequest("/tools/clima", { q: city });
+};
+
+/**
+ * Acortar URL
+ */
+exports.shortUrl = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL!");
+  }
+
+  return await apiRequest("/tools/short", { url });
 };
