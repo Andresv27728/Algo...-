@@ -1,203 +1,158 @@
+
 /**
- * Funciones de comunicación
- * con la API de Spider X.
- *
- * @author Dev Gui
+ * Servicio para comunicación con Delirius API
+ * https://delirius-apiofc.vercel.app/home
  */
 const axios = require("axios");
 
-const { SPIDER_API_TOKEN, SPIDER_API_BASE_URL } = require("../config");
+const DELIRIUS_API_BASE_URL = "https://delirius-apiofc.vercel.app";
 
 /**
- * No configure el token de la API de Spider X aquí, configúrelo en: src/config.js
+ * Descargar audio/video de YouTube
  */
-const spiderAPITokenConfigured =
-  SPIDER_API_TOKEN && SPIDER_API_TOKEN !== "seu_token_aqui";
-
-const messageIfTokenNotConfigured = `¡Token de la API de Spider X no configurado!
-      
-Para configurar, ingrese a la carpeta: \`src\` 
-y edite el archivo \`config.js\`:
-
-Busque:
-
-\`exports.SPIDER_API_TOKEN = "seu_token_aqui";\`
-
-Para obtener su token, 
-cree una cuenta en: https://api.spiderx.com.br
-¡y contrate un plan!`;
-
-exports.spiderAPITokenConfigured = spiderAPITokenConfigured;
-
-exports.play = async (type, search) => {
-  if (!search) {
-    throw new Error("¡Necesitas informar qué quieres buscar!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  const { data } = await axios.get(
-    `${SPIDER_API_BASE_URL}/downloads/play-${type}?search=${encodeURIComponent(
-      search
-    )}&api_key=${SPIDER_API_TOKEN}`
-  );
-
-  return data;
-};
-
-exports.download = async (type, url) => {
+exports.youtubeDl = async (url, format = "mp4") => {
   if (!url) {
-    throw new Error(
-      "¡Necesitas informar una URL de YouTube de lo que quieres buscar!"
-    );
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
+    throw new Error("¡Necesitas proporcionar una URL de YouTube!");
   }
 
   const { data } = await axios.get(
-    `${SPIDER_API_BASE_URL}/downloads/${type}?url=${encodeURIComponent(
-      url
-    )}&api_key=${SPIDER_API_TOKEN}`
+    `${DELIRIUS_API_BASE_URL}/download/ytmp${format === "mp3" ? "3" : "4"}?url=${encodeURIComponent(url)}`
   );
 
   return data;
 };
 
-exports.gemini = async (text) => {
-  if (!text) {
-    throw new Error("¡Necesitas informar el parámetro de texto!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  const { data } = await axios.post(
-    `${SPIDER_API_BASE_URL}/ai/gemini?api_key=${SPIDER_API_TOKEN}`,
-    {
-      text,
-    }
-  );
-
-  return data.response;
-};
-
-exports.attp = async (text) => {
-  if (!text) {
-    throw new Error("¡Necesitas informar el parámetro de texto!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  return `${SPIDER_API_BASE_URL}/stickers/attp?text=${encodeURIComponent(
-    text
-  )}&api_key=${SPIDER_API_TOKEN}`;
-};
-
-exports.ttp = async (text) => {
-  if (!text) {
-    throw new Error("¡Necesitas informar el parámetro de texto!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  return `${SPIDER_API_BASE_URL}/stickers/ttp?text=${encodeURIComponent(
-    text
-  )}&api_key=${SPIDER_API_TOKEN}`;
-};
-
-exports.search = async (type, search) => {
-  if (!search) {
-    throw new Error("¡Necesitas informar el parámetro de búsqueda!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
+/**
+ * Descargar video de TikTok
+ */
+exports.tiktokDl = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL de TikTok!");
   }
 
   const { data } = await axios.get(
-    `${SPIDER_API_BASE_URL}/search/${type}?search=${encodeURIComponent(
-      search
-    )}&api_key=${SPIDER_API_TOKEN}`
+    `${DELIRIUS_API_BASE_URL}/download/tiktok?url=${encodeURIComponent(url)}`
   );
 
   return data;
 };
 
-exports.welcome = (title, description, imageURL) => {
-  if (!title || !description || !imageURL) {
-    throw new Error(
-      "¡Necesitas informar el título, la descripción y la URL de la imagen!"
-    );
+/**
+ * Descargar video de Instagram
+ */
+exports.instagramDl = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL de Instagram!");
   }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  return `${SPIDER_API_BASE_URL}/canvas/welcome?title=${encodeURIComponent(
-    title
-  )}&description=${encodeURIComponent(
-    description
-  )}&image_url=${encodeURIComponent(imageURL)}&api_key=${SPIDER_API_TOKEN}`;
-};
-
-exports.exit = (title, description, imageURL) => {
-  if (!title || !description || !imageURL) {
-    throw new Error(
-      "¡Necesitas informar el título, la descripción y la URL de la imagen!"
-    );
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  return `${SPIDER_API_BASE_URL}/canvas/goodbye?title=${encodeURIComponent(
-    title
-  )}&description=${encodeURIComponent(
-    description
-  )}&image_url=${encodeURIComponent(imageURL)}&api_key=${SPIDER_API_TOKEN}`;
-};
-
-exports.imageAI = async (type, description) => {
-  if (!description) {
-    throw new Error("¡Necesitas informar la descripción de la imagen!");
-  }
-
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
-  }
-
-  const paramSearch = type === "stable-diffusion-turbo" ? "search" : "text";
 
   const { data } = await axios.get(
-    `${SPIDER_API_BASE_URL}/ai/${type}?${paramSearch}=${encodeURIComponent(
-      description
-    )}&api_key=${SPIDER_API_TOKEN}`
+    `${DELIRIUS_API_BASE_URL}/download/instagram?url=${encodeURIComponent(url)}`
   );
 
   return data;
 };
 
-exports.canvas = (type, imageURL) => {
-  if (!imageURL) {
-    throw new Error("¡Necesitas informar la URL de la imagen!");
+/**
+ * Buscar en YouTube
+ */
+exports.youtubeSearch = async (query) => {
+  if (!query) {
+    throw new Error("¡Necesitas proporcionar un término de búsqueda!");
   }
 
-  if (!spiderAPITokenConfigured) {
-    throw new Error(messageIfTokenNotConfigured);
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/search/ytsearch?q=${encodeURIComponent(query)}`
+  );
+
+  return data;
+};
+
+/**
+ * ChatGPT
+ */
+exports.chatgpt = async (text) => {
+  if (!text) {
+    throw new Error("¡Necesitas proporcionar un texto!");
   }
 
-  return `${SPIDER_API_BASE_URL}/canvas/${type}?image_url=${encodeURIComponent(
-    imageURL
-  )}&api_key=${SPIDER_API_TOKEN}`;
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/ai/chatgpt?q=${encodeURIComponent(text)}`
+  );
+
+  return data;
+};
+
+/**
+ * Generador de imágenes AI
+ */
+exports.textToImage = async (prompt) => {
+  if (!prompt) {
+    throw new Error("¡Necesitas proporcionar una descripción!");
+  }
+
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/ai/text2img?q=${encodeURIComponent(prompt)}`
+  );
+
+  return data;
+};
+
+/**
+ * Upscale de imágenes
+ */
+exports.upscaleImage = async (imageUrl) => {
+  if (!imageUrl) {
+    throw new Error("¡Necesitas proporcionar una URL de imagen!");
+  }
+
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/ai/upscale?url=${encodeURIComponent(imageUrl)}`
+  );
+
+  return data;
+};
+
+/**
+ * Eliminar fondo de imagen
+ */
+exports.removeBg = async (imageUrl) => {
+  if (!imageUrl) {
+    throw new Error("¡Necesitas proporcionar una URL de imagen!");
+  }
+
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/ai/removebg?url=${encodeURIComponent(imageUrl)}`
+  );
+
+  return data;
+};
+
+/**
+ * Traducir texto
+ */
+exports.translate = async (text, targetLang = "es") => {
+  if (!text) {
+    throw new Error("¡Necesitas proporcionar un texto para traducir!");
+  }
+
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/tools/translate?q=${encodeURIComponent(text)}&lang=${targetLang}`
+  );
+
+  return data;
+};
+
+/**
+ * Obtener información de una página web
+ */
+exports.webInfo = async (url) => {
+  if (!url) {
+    throw new Error("¡Necesitas proporcionar una URL!");
+  }
+
+  const { data } = await axios.get(
+    `${DELIRIUS_API_BASE_URL}/tools/webinfo?url=${encodeURIComponent(url)}`
+  );
+
+  return data;
 };
