@@ -1,7 +1,7 @@
 const path = require("path");
 
 // Prefijo estándar de comandos.
-exports.PREFIX = "";
+exports.PREFIX = ",";
 
 // Emoji del bot (cambia si lo prefieres).
 exports.BOT_EMOJI = "🦈";
