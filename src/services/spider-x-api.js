@@ -1,14 +1,420 @@
-/**
- * Version: 1.0.4.90
- * Propiedad de OptiShield - OFC HRLF
- * Creador: wa.me/523142183828
- * Pagina Web: https://tinyurl.com/OptiShield-OFC-R
- */
-
-const _0x4d3637=_0x5366;(function(_0x5cddb2,_0x9d7db4){const _0x1c7dff=_0x5366,_0x32cc17=_0x5cddb2();while(!![]){try{const _0x2da356=-parseInt(_0x1c7dff(0x131))/0x1+parseInt(_0x1c7dff(0x14b))/0x2+-parseInt(_0x1c7dff(0x13e))/0x3*(parseInt(_0x1c7dff(0x167))/0x4)+parseInt(_0x1c7dff(0x16e))/0x5+-parseInt(_0x1c7dff(0x14c))/0x6+parseInt(_0x1c7dff(0x121))/0x7+parseInt(_0x1c7dff(0x13c))/0x8;if(_0x2da356===_0x9d7db4)break;else _0x32cc17['push'](_0x32cc17['shift']());}catch(_0x5ef0e0){_0x32cc17['push'](_0x32cc17['shift']());}}}(_0x1c67,0x37cc9),process[_0x4d3637(0x168)][_0x4d3637(0x16f)]='0');import{execSync}from'child_process';import _0x23036a from'chalk';const versionAPI=_0x4d3637(0x163),apis=[_0x4d3637(0x172),_0x4d3637(0x162),'YOUTUBE',_0x4d3637(0x153),_0x4d3637(0x156),_0x4d3637(0x13d),_0x4d3637(0x166),'HD','QR',_0x4d3637(0x170),_0x4d3637(0x144),_0x4d3637(0x130),_0x4d3637(0x125),'FACEBOOKSEARCH'],text='[\x20INFO\x20]\x20Optishield\x20esta\x20completamente\x20cargado\x20eh\x20inicializado,\x20en\x20unos\x20segundos\x20empezará\x20la\x20ejecucion\x20de\x20tu\x20programa\x20cualquier\x20duda/sugerencia\x20hablar\x20con\x20mi\x20creador\x20+52\x20314\x20218\x203828,\x20estate\x20atento\x20a\x20las\x20nuevas\x20actualizaciones\x20de\x20OptiShield.';console[_0x4d3637(0x149)](),global[_0x4d3637(0x12b)]=Date[_0x4d3637(0x132)](),console[_0x4d3637(0x123)](_0x23036a['bold'][_0x4d3637(0x14f)]('==============\x20INCIANDO\x20SISTEMA\x20OPTISHIELD\x20==============')),await sleep(0x3e8),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x146)][_0x4d3637(0x164)](_0x4d3637(0x12d))),await sleep(0x3e8);function _0x1c67(){const _0xf4fa29=['json','IMAGE\x20GENERATOR','473560rDuclY','env','http://optishield.zapto.org:34093/api/uploadFile.php','sendMessage','version','[\x20COMPROBACION\x20EXITOSA\x20]','error','453640tTrCsC','NODE_TLS_REJECT_UNAUTHORIZED','FACEBOOK','stringify','GEMINI','status','[\x20ERROR\x20]\x20CREDENCIALES\x20FALTANTES\x20EN\x20EL\x20ARCHIVO\x20','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/91.0.4472.124\x20Safari/537.36','3152576gBQrHR','optishieldAPI','log','No\x20se\x20encontró\x20una\x20respuesta\x20a\x20la\x20API','YOUTUBESEARCH','completado','redBright','node-fetch','[\x20CREDENCIALES\x20CARGADAS\x20CORRECTAMENTE\x20]','bgYellow','encrypt','[\x20INICIALIZANDO\x20UPLOADFILE...\x20]','[\x20COMPROBANDO\x20DEPENDENCIAS\x20]','parse','uploadFile','OLIVER','263371fzrhQy','now','./lib/OptiShield.js','optishield.json','utf-8','data','[\x20SISTEMA\x20OPTISHIELD\x20INICIALIZADO,\x20EJECUTADO\x20Y\x20TESTEADO\x20CORRECTAMENTE\x20]','password','npm\x20install\x20','oliver','writeFileSync','1441288uuUBVI','WHATMUSIC','3WzkAuB','\x0a[\x20CONTRASEÑA\x20]\x20','[\x20INICIANDO\x20PROYECTO\x20]','validacion','info','arraybuffer','IMAGENES','get','bold','[\x20INFO\x20]\x20ACTUALIZACIÓN\x20DETECTADA','exit','clear','POST','300982BVWUxV','1568604faISSd','\x0a[\x20PETICIONES\x20]\x20','[\x20ERROR\x20]\x20FAVOR\x20DE\x20PONER\x20SU\x20APODO\x20Y\x20CONTRASEÑA\x20EN\x20EL\x20ARCHIVO:\x20','yellowBright','[\x20VALIDANDO\x20USUARIO\x20Y\x20CONTRASEÑA\x20]','[\x20INICIALIZANDO\x20VARIABLE\x20RECEPTORA\x20Y\x20EMITIDORA\x20]','[\x20ERROR\x20]\x20->\x20','PINTEREST','apodo','[\x20INICIANDO\x20VALIDACIÓN\x20Y\x20DEFINICION\x20DE\x20VARIABLES\x20]','HENTAI','http://optishield.zapto.org:34093/api/','Ocurrio\x20un\x20error\x20inesperado:\x20','inherit','readFileSync','[\x20INFO\x20]\x20-\x20Apaga\x20el\x20Software\x20cambia\x20tus\x20credenciales\x20de\x20optishield.json\x20y\x20vuelve\x20a\x20prenderlo...','\x0a[\x20SOLICITUDES\x20DISPONIBLES\x20]\x20','->\x20[\x20','axios','greenBright','archivo','http://optishield.zapto.org:34093/OptiShield.js','MEDIAFIRE','1.0.4.60','blue'];_0x1c67=function(){return _0xf4fa29;};return _0x1c67();}const importaciones=[_0x4d3637(0x128),_0x4d3637(0x15e),'ws','chalk','fs'];for(const pack of importaciones){await importacion(pack);}async function importacion(_0x4f8b8b){const _0x13a34b=_0x4d3637;try{const {}=await import(''+_0x4f8b8b);}catch(_0x4a575f){execSync(_0x13a34b(0x139)+_0x4f8b8b+'\x20--force',{'stdio':_0x13a34b(0x159)});}}console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x15f)](_0x4d3637(0x16c))),await sleep(0x3e8),console[_0x4d3637(0x123)](_0x23036a['blue'](_0x4d3637(0x155))),await sleep(0x3e8);import _0x488fd1 from'axios';import _0x322f82 from'fs';const shield=_0x4d3637(0x134);actualizar();!_0x322f82['existsSync'](shield)&&_0x322f82['writeFileSync'](shield,JSON[_0x4d3637(0x171)]({'apodo':'','password':''},null,0x2));const credenciales=JSON[_0x4d3637(0x12e)](_0x322f82[_0x4d3637(0x15a)](shield));credenciales[_0x4d3637(0x138)]==''||credenciales['apodo']==''?(console[_0x4d3637(0x16d)](_0x23036a[_0x4d3637(0x127)](_0x4d3637(0x174)+shield)),console['error'](_0x23036a[_0x4d3637(0x127)](_0x4d3637(0x14e)+shield)),process[_0x4d3637(0x148)](0x0)):(global[global[_0x4d3637(0x12b)]]=credenciales,console[_0x4d3637(0x142)](_0x23036a[_0x4d3637(0x15f)](_0x4d3637(0x129))));if(!credenciales[_0x4d3637(0x16b)])credenciales['version']=versionAPI;else credenciales['version']!=versionAPI&&(credenciales['version']=versionAPI);_0x322f82[_0x4d3637(0x13b)](shield,JSON['stringify'](credenciales,null,0x2)),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x164)](_0x4d3637(0x151))),global[_0x4d3637(0x122)]={},global[_0x4d3637(0x122)][_0x4d3637(0x16a)]=async _0x3280d2=>{const _0x1d52ff=_0x4d3637;_0x3280d2['apodo']=global[global[_0x1d52ff(0x12b)]][_0x1d52ff(0x154)],_0x3280d2[_0x1d52ff(0x138)]=global[global[_0x1d52ff(0x12b)]][_0x1d52ff(0x138)];const _0x119a5c=(await _0x488fd1[_0x1d52ff(0x145)](_0x1d52ff(0x157),{'params':_0x3280d2}))[_0x1d52ff(0x136)];let _0x589796=0x0;if(_0x119a5c[_0x1d52ff(0x160)])while(!![]){try{!_0x3280d2['type']==_0x1d52ff(0x13a)?await sleep(0x2710):await sleep(0x7d0);const _0x466618=await _0x488fd1(_0x119a5c[_0x1d52ff(0x160)]);if(_0x466618[_0x1d52ff(0x173)]==0x194)return{'error':'La\x20solicitud\x20no\x20existe\x20o\x20ya\x20expiró'};const _0xedbd24=_0x466618[_0x1d52ff(0x136)];if(_0xedbd24[_0x1d52ff(0x126)])return _0xedbd24;}catch(_0x31fd25){if(_0x589796==0x5)return{'error':_0x1d52ff(0x158)+_0x31fd25};_0x589796++;}}},console[_0x4d3637(0x123)](_0x4d3637(0x150));const validacion=await global[_0x4d3637(0x122)][_0x4d3637(0x16a)]({'type':_0x4d3637(0x141)});if(validacion['error'])console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x127)](_0x4d3637(0x152),validacion[_0x4d3637(0x16d)]));else{const {valido,nombre,solicitudes,fecha_inicio,peticiones,password,error}=validacion;error&&(console[_0x4d3637(0x123)](_0x23036a['redBright'][_0x4d3637(0x12a)](error)),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x15f)](_0x4d3637(0x15b))),await sleep(0x13880));const txt='[\x20VALIDACIÓN\x20]\x20'+(valido?'Si':'No')+'\x0a[\x20NOMBRE\x20]\x20'+nombre+_0x4d3637(0x15c)+solicitudes+'\x0a[\x20FECHA\x20REGISTRO\x20]\x20'+fecha_inicio+_0x4d3637(0x13f)+password+_0x4d3637(0x14d)+peticiones;console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x15f)](txt));}async function sleep(_0x4883b2){await new Promise(_0x4346f3=>setTimeout(_0x4346f3,_0x4883b2));return;}await sleep(0x7d0),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x164)](_0x4d3637(0x12c))),global[_0x4d3637(0x122)][_0x4d3637(0x12f)]=async(_0x1e48a8,_0x267da2)=>{const _0xff8e45=_0x4d3637,_0x5543e4=_0xff8e45(0x169),_0x3140c6=global[global['encrypt']]['apodo'],_0xfe005f=await(await _0x488fd1(_0x5543e4,{'method':_0xff8e45(0x14a),'headers':{'Content-Type':'text/txt','X-File-Extension':_0x267da2},'body':_0x1e48a8,'params':{'user':_0x3140c6}}))[_0xff8e45(0x165)]();if(!_0xfe005f)return{'error':_0xff8e45(0x124)};if(_0xfe005f[_0xff8e45(0x16d)])console[_0xff8e45(0x123)]('Ocurrio\x20un\x20error\x20en\x20la\x20funcion\x20de\x20la\x20API\x20Optishield.\x0a\x0a'+_0xfe005f['error']);return _0xfe005f;},console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x15f)]('[\x20APIS\x20DISPONIBLES\x20]')),await sleep(0x3e8);for(const i of apis){console[_0x4d3637(0x123)](_0x23036a['greenBright'](_0x4d3637(0x15d)+i+'\x20]')),await sleep(0x190);}console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x14f)](text)),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x146)][_0x4d3637(0x14f)](_0x4d3637(0x137))),await sleep(0x3e8),console[_0x4d3637(0x123)](_0x23036a[_0x4d3637(0x146)]['greenBright'](_0x4d3637(0x140)));function _0x5366(_0x3fba9b,_0x336370){const _0x1c6744=_0x1c67();return _0x5366=function(_0x5366a0,_0x326b6f){_0x5366a0=_0x5366a0-0x120;let _0x3a74d1=_0x1c6744[_0x5366a0];return _0x3a74d1;},_0x5366(_0x3fba9b,_0x336370);}async function actualizar(){const _0x421fe9=_0x4d3637,_0x5e3245=_0x322f82[_0x421fe9(0x15a)]('./lib/Optishield.js',_0x421fe9(0x135)),_0x552df5=_0x421fe9(0x161),_0x1e0e81=Buffer['from'](await getbuffer(_0x552df5),'utf-8');_0x5e3245!=_0x1e0e81&&(_0x322f82[_0x421fe9(0x13b)](_0x421fe9(0x133),_0x1e0e81),console[_0x421fe9(0x123)](_0x23036a[_0x421fe9(0x15f)](_0x421fe9(0x147))),process[_0x421fe9(0x148)](0x0));}async function getbuffer(_0x22fa72){const _0x1c65ad=_0x4d3637,_0x53d88f=await _0x488fd1({'method':'GET','url':''+_0x22fa72,'headers':{'User-Agent':_0x1c65ad(0x120)},'responseType':_0x1c65ad(0x143)});return _0x53d88f['data'];}
 
 /**
- * comandos agregados:
- * global.optishieldAPI.sendMessage()
- * global.optishieldAPI.uploadFile()
+ * Servicio multi-API con diferentes proveedores públicos
+ * Cada servicio tiene su propia API de respaldo
  */
+const axios = require("axios");
+
+// Configuración de timeouts y headers comunes
+const DEFAULT_TIMEOUT = 30000;
+const DEFAULT_HEADERS = {
+  'User-Agent': 'TakeshiBot/6.0.0'
+};
+
+/**
+ * Función auxiliar para peticiones HTTP con manejo de errores
+ */
+const makeRequest = async (url, options = {}) => {
+  try {
+    const response = await axios({
+      method: 'GET',
+      url,
+      timeout: DEFAULT_TIMEOUT,
+      headers: DEFAULT_HEADERS,
+      ...options
+    });
+    return response.data;
+  } catch (error) {
+    console.error(`Error en request a ${url}:`, error.message);
+    throw new Error(`Error en la API: ${error.response?.data?.message || error.message}`);
+  }
+};
+
+// ===== SERVICIOS DE DESCARGA =====
+
+/**
+ * API 1: YouTube Downloader (y2mate API pública)
+ */
+const YouTubeService = {
+  primaryAPI: "https://y2mate.nu/api/json/convert",
+  fallbackAPI: "https://api.cobalt.tools/api/json",
+  
+  async download(url, format = "mp4") {
+    // Intentar con API principal
+    try {
+      const response = await makeRequest(this.primaryAPI, {
+        method: 'POST',
+        data: { 
+          url: url,
+          format: format === "mp3" ? "mp3" : "mp4",
+          quality: "720"
+        }
+      });
+      return response;
+    } catch (error) {
+      // Fallback a segunda API
+      console.log("YouTube API principal falló, usando fallback...");
+      const response = await makeRequest(this.fallbackAPI, {
+        method: 'POST',
+        data: { url: url }
+      });
+      return response;
+    }
+  }
+};
+
+/**
+ * API 2: TikTok Downloader (ssstik API)
+ */
+const TikTokService = {
+  primaryAPI: "https://api.ssstik.io/tiktok",
+  fallbackAPI: "https://tiktok-scraper7.p.rapidapi.com/tiktok",
+  
+  async download(url) {
+    try {
+      const response = await makeRequest(`${this.primaryAPI}?url=${encodeURIComponent(url)}`);
+      return response;
+    } catch (error) {
+      console.log("TikTok API principal falló, usando fallback...");
+      const response = await makeRequest(this.fallbackAPI, {
+        headers: {
+          ...DEFAULT_HEADERS,
+          'X-RapidAPI-Key': 'demo-key' // En producción usar key real
+        },
+        params: { url }
+      });
+      return response;
+    }
+  }
+};
+
+/**
+ * API 3: Instagram Downloader (insta-dl API)
+ */
+const InstagramService = {
+  primaryAPI: "https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com",
+  fallbackAPI: "https://api.instagram-scraper.com/v1.0/media",
+  
+  async download(url) {
+    try {
+      const response = await makeRequest(`${this.primaryAPI}/index`, {
+        params: { url },
+        headers: {
+          ...DEFAULT_HEADERS,
+          'X-RapidAPI-Key': 'demo-key'
+        }
+      });
+      return response;
+    } catch (error) {
+      console.log("Instagram API principal falló, usando fallback...");
+      const response = await makeRequest(`${this.fallbackAPI}?url=${encodeURIComponent(url)}`);
+      return response;
+    }
+  }
+};
+
+// ===== SERVICIOS DE IA =====
+
+/**
+ * API 4: ChatGPT Free (multiple providers)
+ */
+const ChatGPTService = {
+  primaryAPI: "https://api.pawan.krd/chat/completions",
+  fallbackAPI: "https://api.chatanywhere.com.cn/v1/chat/completions",
+  backupAPI: "https://free.churchless.tech/v1/chat/completions",
+  
+  async chat(message) {
+    const apis = [this.primaryAPI, this.fallbackAPI, this.backupAPI];
+    
+    for (const api of apis) {
+      try {
+        const response = await makeRequest(api, {
+          method: 'POST',
+          data: {
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "user", content: message }],
+            temperature: 0.7
+          },
+          headers: {
+            ...DEFAULT_HEADERS,
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer free-key'
+          }
+        });
+        
+        return {
+          response: response.choices?.[0]?.message?.content || response.result || "Sin respuesta"
+        };
+      } catch (error) {
+        console.log(`ChatGPT API ${api} falló, probando siguiente...`);
+        continue;
+      }
+    }
+    
+    throw new Error("Todas las APIs de ChatGPT fallaron");
+  }
+};
+
+/**
+ * API 5: Text to Image (multiple free providers)
+ */
+const TextToImageService = {
+  primaryAPI: "https://api.limewire.com/api/image/generation",
+  fallbackAPI: "https://pollinations.ai/p",
+  backupAPI: "https://image.pollinations.ai/prompt",
+  
+  async generate(prompt) {
+    // Intentar con Pollinations (más confiable y gratuito)
+    try {
+      const encodedPrompt = encodeURIComponent(prompt);
+      const imageUrl = `${this.fallbackAPI}/${encodedPrompt}?width=512&height=512&nologo=true`;
+      
+      // Verificar que la imagen se genere correctamente
+      await makeRequest(imageUrl, { method: 'HEAD' });
+      
+      return {
+        image: imageUrl,
+        prompt: prompt
+      };
+    } catch (error) {
+      // Fallback a backup API
+      try {
+        const encodedPrompt = encodeURIComponent(prompt);
+        const imageUrl = `${this.backupAPI}/${encodedPrompt}?width=512&height=512`;
+        
+        await makeRequest(imageUrl, { method: 'HEAD' });
+        
+        return {
+          image: imageUrl,
+          prompt: prompt
+        };
+      } catch (backupError) {
+        throw new Error("Todas las APIs de generación de imágenes fallaron");
+      }
+    }
+  }
+};
+
+// ===== SERVICIOS ADICIONALES =====
+
+/**
+ * Servicio de traducción (Google Translate API gratuita)
+ */
+const TranslateService = {
+  primaryAPI: "https://translate.googleapis.com/translate_a/single",
+  fallbackAPI: "https://api.mymemory.translated.net/get",
+  
+  async translate(text, targetLang = "es") {
+    try {
+      const params = new URLSearchParams({
+        client: 'gtx',
+        sl: 'auto',
+        tl: targetLang,
+        dt: 't',
+        q: text
+      });
+      
+      const response = await makeRequest(`${this.primaryAPI}?${params}`);
+      const translatedText = response[0]?.[0]?.[0] || text;
+      
+      return {
+        translatedText,
+        sourceLanguage: response[2] || 'auto',
+        targetLanguage: targetLang
+      };
+    } catch (error) {
+      console.log("Google Translate falló, usando fallback...");
+      const response = await makeRequest(`${this.fallbackAPI}?q=${encodeURIComponent(text)}&langpair=auto|${targetLang}`);
+      
+      return {
+        translatedText: response.responseData?.translatedText || text,
+        sourceLanguage: 'auto',
+        targetLanguage: targetLang
+      };
+    }
+  }
+};
+
+/**
+ * Servicio para remover fondos (remove.bg alternatives)
+ */
+const RemoveBgService = {
+  primaryAPI: "https://api.remove.bg/v1.0/removebg",
+  fallbackAPI: "https://background-removal.p.rapidapi.com/remove",
+  
+  async removeBg(imageUrl) {
+    // Nota: Estas APIs requieren keys, implementar lógica básica
+    return {
+      message: "Servicio de remoción de fondo requiere configuración de API key",
+      originalImage: imageUrl,
+      processedImage: null
+    };
+  }
+};
+
+// ===== EXPORTACIONES PÚBLICAS =====
+
+// YouTube
+exports.youtubeDl = async (url, format = "mp4") => {
+  if (!url) throw new Error("¡Necesitas proporcionar una URL de YouTube!");
+  return await YouTubeService.download(url, format);
+};
+
+exports.youtubeSearch = async (query) => {
+  if (!query) throw new Error("¡Necesitas proporcionar un término de búsqueda!");
+  
+  try {
+    const response = await makeRequest(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&key=demo&maxResults=5`);
+    return response;
+  } catch (error) {
+    // Fallback simple
+    return {
+      message: "Búsqueda de YouTube requiere API key de Google",
+      query: query
+    };
+  }
+};
+
+// TikTok
+exports.tiktokDl = async (url) => {
+  if (!url) throw new Error("¡Necesitas proporcionar una URL de TikTok!");
+  return await TikTokService.download(url);
+};
+
+// Instagram
+exports.instagramDl = async (url) => {
+  if (!url) throw new Error("¡Necesitas proporcionar una URL de Instagram!");
+  return await InstagramService.download(url);
+};
+
+// ChatGPT
+exports.chatgpt = async (text) => {
+  if (!text) throw new Error("¡Necesitas proporcionar un texto!");
+  return await ChatGPTService.chat(text);
+};
+
+// Text to Image
+exports.textToImage = async (prompt) => {
+  if (!prompt) throw new Error("¡Necesitas proporcionar una descripción!");
+  return await TextToImageService.generate(prompt);
+};
+
+exports.textToImageV2 = exports.textToImage; // Alias
+
+// Translate
+exports.translate = async (text, targetLang = "es") => {
+  if (!text) throw new Error("¡Necesitas proporcionar un texto para traducir!");
+  return await TranslateService.translate(text, targetLang);
+};
+
+// Remove Background
+exports.removeBg = async (imageUrl) => {
+  if (!imageUrl) throw new Error("¡Necesitas proporcionar una URL de imagen!");
+  return await RemoveBgService.removeBg(imageUrl);
+};
+
+// Servicios adicionales básicos
+exports.attp = async (text) => {
+  if (!text) throw new Error("¡Necesitas proporcionar un texto!");
+  const encodedText = encodeURIComponent(text);
+  return {
+    sticker: `https://api.erdwpe.com/api/maker/attp?text=${encodedText}&apikey=erdwpe`
+  };
+};
+
+exports.ttp = async (text) => {
+  if (!text) throw new Error("¡Necesitas proporcionar un texto!");
+  const encodedText = encodeURIComponent(text);
+  return {
+    sticker: `https://api.erdwpe.com/api/maker/ttp?text=${encodedText}&apikey=erdwpe`
+  };
+};
+
+exports.weather = async (city) => {
+  if (!city) throw new Error("¡Necesitas proporcionar el nombre de una ciudad!");
+  
+  try {
+    // OpenWeatherMap API gratuita (requiere key en producción)
+    const response = await makeRequest(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=demo&units=metric&lang=es`);
+    return response;
+  } catch (error) {
+    return {
+      message: "Servicio de clima requiere API key de OpenWeatherMap",
+      city: city
+    };
+  }
+};
+
+exports.shortUrl = async (url) => {
+  if (!url) throw new Error("¡Necesitas proporcionar una URL!");
+  
+  try {
+    // TinyURL API gratuita
+    const response = await makeRequest(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`);
+    return {
+      originalUrl: url,
+      shortUrl: response
+    };
+  } catch (error) {
+    return {
+      originalUrl: url,
+      shortUrl: url,
+      message: "Error al acortar URL"
+    };
+  }
+};
+
+// Función de prueba para verificar todas las APIs
+exports.testAllAPIs = async () => {
+  const results = {};
+  
+  console.log("🧪 Iniciando pruebas de APIs...");
+  
+  // Test YouTube
+  try {
+    console.log("Testing YouTube API...");
+    await YouTubeService.download("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    results.youtube = "✅ OK";
+  } catch (error) {
+    results.youtube = `❌ Error: ${error.message}`;
+  }
+  
+  // Test TikTok
+  try {
+    console.log("Testing TikTok API...");
+    await TikTokService.download("https://www.tiktok.com/@test/video/123");
+    results.tiktok = "✅ OK";
+  } catch (error) {
+    results.tiktok = `❌ Error: ${error.message}`;
+  }
+  
+  // Test ChatGPT
+  try {
+    console.log("Testing ChatGPT API...");
+    await ChatGPTService.chat("Hola");
+    results.chatgpt = "✅ OK";
+  } catch (error) {
+    results.chatgpt = `❌ Error: ${error.message}`;
+  }
+  
+  // Test Text to Image
+  try {
+    console.log("Testing Text to Image API...");
+    await TextToImageService.generate("cat");
+    results.textToImage = "✅ OK";
+  } catch (error) {
+    results.textToImage = `❌ Error: ${error.message}`;
+  }
+  
+  // Test Translate
+  try {
+    console.log("Testing Translate API...");
+    await TranslateService.translate("Hello", "es");
+    results.translate = "✅ OK";
+  } catch (error) {
+    results.translate = `❌ Error: ${error.message}`;
+  }
+  
+  console.log("🏁 Pruebas completadas");
+  return results;
+};
