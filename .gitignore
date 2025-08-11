@@ -1,2 +1,28 @@
 assets/auth/baileys
 .vscode
+
+# Archivos de autenticación y sessión del bot
+assets/auth/
+assets/temp/
+database/
+node_modules/
+
+# Logs del bot
+assets/temp/wa-logs.txt
+*.log
+
+# Archivos de configuración con datos sensibles
+src/config.js
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env
+.env.local
+.env.production
